@@ -1,0 +1,11 @@
+extends base.pug
+include breadcrumbs.pug
+include grid.pug
+block main
+    main.main
+        +breadcrumbs(['Главная', 'Блог'])
+        .container
+            h1.heading.heading_1.heading_left Полезные статьи
+        .container
+            +grid(['Статья о загородном строительстве 1', 'Статья о загородном строительстве 2', 'Статья о загородном строительстве 3', 'Статья 4', 'статья 5'], 'post.html', 'img/post.jpg')
+            a.btn.btn_base.btn_outlined.btn_center Загрузить еще

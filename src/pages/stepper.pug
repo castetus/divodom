@@ -1,0 +1,19 @@
+.stepper#stepper
+    span.heading.heading_2.stepper__title Этапы работы с клиентом
+    
+    img.stepper__logo(src="img/logo_2.png")
+    
+    ul.stepper__wrapper#stepper-wrapper
+        each val, key in {1: 'Консультация', 2: 'Проект', 3: 'Смета', 4: 'Договор', 5: 'Домокомплект', 6: 'Подготовка под фундамент', 7: 'Фундамент', 8: 'Сборка стен', 9: 'Кровля + окна', 10: 'Отделка', 11: 'Акт', 12: 'Ключ'}
+                li(class=`stepper__block stepper__block_${key}`)
+                    a(class=`stepper__link stepper__link_${key}` href="service.html")
+                        if key%2 === 0
+                            //- span.stepper__number.stepper__number_bottom= key
+                            span.stepper__text.stepper__text_bottom= val 
+                                //- .stepper__description.stepper__description_bottom Какой-то текст с расшифровкой того, что собсвтенно делается на этом этапе
+                        else 
+                            //- span.stepper__number.stepper__number_top= key
+                            span.stepper__text.stepper__text_top= val 
+                                //- .stepper__description.stepper__description_top Какой-то текст с расшифровкой того, что собственно делается на этом этапе
+    a.stepper__bottom-link Гарантии
+    

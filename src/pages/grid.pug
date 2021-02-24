@@ -1,0 +1,9 @@
+mixin grid(items, link, img)
+    .grid
+        each item in items
+            .grid__card
+                img.grid__img(src=img)
+                a.link.grid__link(href=link)
+                    .grid__content
+                        h3.heading.heading_3.grid__title= item
+                        p.grid__excerpt здесь будет отрывок поста

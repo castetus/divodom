@@ -1,0 +1,25 @@
+extends base.pug
+include project-card.pug
+include breadcrumbs.pug
+block main
+    main.main
+        +breadcrumbs(['Главная', 'Проекты'])
+        .container
+            h1.heading.heading_1.heading_left Проекты домов
+        .container
+            include sidebar.pug
+            .main-section
+                .sort-bar
+                    .sort-bar__label Сортировать
+                    select.sort-bar__select 
+                        option По умолчанию
+                        option По возрастанию цены
+                        option По убыванию цены
+                .projects-loop
+                        - var i = 0;
+                            while i < 12
+                                +project-card
+                                - i++
+        include floating-button.pug
+
+

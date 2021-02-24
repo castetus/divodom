@@ -1,0 +1,21 @@
+.floating-button {
+  position: fixed;
+  width: 100%;
+  bottom: 30px; }
+  .floating-button__btn {
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50px;
+    width: 60%;
+    border: 1px solid #261211;
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.4s ease; }
+    .floating-button__btn_hidden {
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.4s ease; }
+  @media screen and (min-width: 767px) {
+    .floating-button {
+      display: none; } }

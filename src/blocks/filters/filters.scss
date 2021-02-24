@@ -1,0 +1,33 @@
+@import "../../scss/variables";
+.filters{
+    width: 100%;
+    border: 1px solid $dark-grey-color;
+    margin-bottom: 20px;
+    &__section{
+        padding: 15px;
+        border-bottom: 1px solid $dark-grey-color;
+        &:last-child{
+            border-bottom: none;
+        }
+    }
+    &__block{
+        display: flex;
+        margin-bottom: 20px;
+    }
+    &__title{
+        margin-top: 0;
+        font-size: 17px;
+    }
+    &__label{
+        display: flex;
+        cursor: pointer;
+        font-size: 12px;
+        margin-left: 10px;
+        &:hover{
+            color: $dark-grey-color;
+        }
+    }
+    &__text{
+        margin-left: 10px;
+    }
+}

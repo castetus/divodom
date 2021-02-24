@@ -1,0 +1,14 @@
+.main-banner {
+  position: relative; }
+  .main-banner__img {
+    width: 100%; }
+  .main-banner__content {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    max-width: 50%;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    text-align: right; }
+  .main-banner__text {
+    color: #fff; }

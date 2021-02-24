@@ -1,0 +1,25 @@
+@import "../scss/variables";
+
+.heading{
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+    &_1{
+        margin: 15px 0;
+        @media screen and (min-width: $tablets){
+            font-size: 34px;
+            margin: 30px 0;
+            
+        }
+    }
+    &_2{
+
+    }
+    &_3{
+        font-size: 19px;
+        
+    }
+    &_left{
+        text-align: left;
+    }
+}

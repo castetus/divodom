@@ -1,0 +1,15 @@
+@import "../scss/variables";
+.post{
+    &__img{
+        max-width: 100%;
+    }
+    &__attrs{
+        display: flex;
+        font-style: italic;
+        justify-content: space-between;
+        padding: 20px 0;
+    }
+    &__content{
+        text-align: justify;
+    }
+}

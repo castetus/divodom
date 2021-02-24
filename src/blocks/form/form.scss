@@ -1,0 +1,87 @@
+@import "../../scss/variables";
+.form{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    &__wrapper{
+        width: 100%;
+        padding: 30px;
+        background-color: $base-color;
+        color: $white-color;
+        margin: 30px auto;
+        text-align: center;
+    }
+    &__elem{
+        margin-top: 20px;
+    }
+    &__field{
+        width: 100%;
+        line-height: 1.9rem;
+        background-color: $white-color;
+        
+        border: none;
+        border-radius: 2px;
+        color: $white-color;
+        flex-basis: 33%;
+        padding-left: 10px;
+        @media screen and (min-width: $tablets){
+            border-right: $base-border;
+            border-radius: 0;
+        }
+    }
+    &__checkbox-wrapper{
+        display: flex;
+        order: 3;
+        @media screen and (min-width: $tablets){
+            order: 4;
+        }
+    }
+    &__checkbox{
+        margin-right: 10px;
+    }
+    &__button{
+        order: 4;
+        @media screen and (min-width: $tablets){
+            order: 3;
+            border-radius: 0;
+        }
+    }
+    &_modal{
+        display: none;
+        left: calc(50% - 150px);
+        z-index: 350;
+        position: fixed;
+        width: 300px;
+        @media screen and (min-width: $tablets){
+            width: 500px;
+            left: calc(50% - 250px);
+        }
+        @media screen and (min-width: $desktop){
+            width: 800px;
+            left: calc(50% - 400px);
+        }
+    }
+    &_visible{
+        display: block;
+    }
+    @media screen and (min-width: $tablets){
+        
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+    @media screen and (min-width: $desktop){
+        &:before{
+            content: '';
+            background: url('img/logo_1_cropped.jpg') left top no-repeat;
+            background-size: contain;
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            left: 0;
+            top: -60px;
+        }
+    }
+}

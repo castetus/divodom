@@ -1,0 +1,16 @@
+.mask{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    z-index: 250;
+    top: 0;
+    visibility: hidden;
+    transition: opacity 0.4s, visibility 0.4s; 
+    opacity: 0;
+    &_visible{
+        visibility: visible;
+        opacity: 0.5;
+        transition: opacity 0.4s; 
+    }
+}

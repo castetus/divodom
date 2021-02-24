@@ -1,0 +1,25 @@
+@import "../scss/variables";
+.breadcrumbs{
+    padding-top: 44px;
+    &__list{
+
+    }
+    &__item{
+        position: relative;
+        list-style-type: none;
+        display: inline-block;
+        &:not(:last-child){
+            &:after{
+                content: '>';
+                position: absolute;
+                right: 8px;
+                color: $grey-text-color;
+            }
+        }
+    }
+    &__link{
+        color: $grey-text-color;
+        margin-right: 30px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,125 @@
+@import "../../scss/variables";
+
+.stepper{
+    overflow: hidden;
+    width: 100%;
+    min-height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &__title {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 40px;
+    }
+    &__wrapper {
+        position: absolute;
+        width: 100%;
+    }
+    &__logo {
+        width: 30%;
+        position: absolute;
+        left: 35%;
+        height: auto;
+    }
+    &__block {
+        position: absolute;
+        // border: 1px dashed $second-accent-color;
+        list-style-type: none;
+        // width: calc(42% - 145px);
+        width: 100%;
+        height: 30px;
+        // transform-origin: 150% 0px;
+        // &:after {
+        //   content: "";
+        //   background: url("img/icons/alt-arrow.svg") center no-repeat;
+        //   background-size: contain;
+        //   width: 80px;
+        //   height: 80px;
+        //   position: absolute;
+        //   left: -45px;
+        //   bottom: 60px;
+        //   transform: rotate(12deg);
+        // }
+        &:marker{
+            display: none;
+        }
+    }
+    &__link {
+        // display: none;
+        font-size: 14px;
+        position: absolute;
+        transform-origin: left;
+        color: $base-color;
+        border-radius: 50%;
+        padding: 0;
+        flex-direction: column;
+        &_1{
+            left: 16%;
+            top: 81%;
+        }
+        &_2{
+            left: 17%;
+            top: 10%;
+        }
+        &_3{
+            left: 19%;
+        }
+        &_4{
+            left: 18%;
+        }
+        &_5{
+            left: 14%;
+            top: -55%;
+        }
+        &_6{
+            left: 2%;
+            bottom: 300%;
+        }
+        &_7{
+            top: -132%;
+        }
+        &_8{
+            top: -46%;
+        }
+        &_9{
+            // top: -25px;
+            // left: -33px;
+        }
+        &_10{
+            // top: -13px;
+            // left: -27px;
+        }
+        &_11{
+            // top: -10px;
+            // left: -10px;
+        }
+        &_12{
+            top: 52%;
+        }
+    }
+    &__bottom-link {
+        position: absolute;
+        font-size: 14px;
+        bottom: 10px;
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+}
+
+@for $i from 1 through 12 {
+    .stepper__block_#{$i} {
+      transform: rotate(90deg + (30deg * $i));
+    }
+}
+  @for $i from 1 through 12 {
+    .stepper__link_#{$i} {
+      transform: rotate(-90deg + (-30deg * $i));
+    }
+}
+

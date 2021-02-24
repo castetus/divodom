@@ -1,0 +1,8 @@
+.main-page-cta {
+  display: flex;
+  width: 100%; }
+  .main-page-cta__title {
+    font-size: 17px;
+    flex: 1 0 50%; }
+  .main-page-cta__content {
+    flex: 1 0 50%; }

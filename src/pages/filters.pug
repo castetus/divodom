@@ -1,0 +1,24 @@
+.filters
+    .filters__section
+        h3.heading.heading_3.heading_left.filters__title Материал
+        each val, key in {timber: 'Клееный брус', concrete: 'Газобетон', brick: 'Кирпич', combined:  'Комбинированный'}
+            .filters__block
+                label.filters__label
+                    input(type="checkbox" name= key) 
+                    span.filters__text= val
+
+    .filters__section
+        h3.heading.heading_3.heading_left.filters__title Площадь
+        each val, key in {100: 'до 100 м2', 150: '100 - 150 м2', 250: '150 - 250 м2', max: 'свыше 250 м2'}
+            .filters__block
+                label.filters__label
+                    input(type="checkbox" name= key) 
+                    span.filters__text= val
+
+    .filters__section
+        h3.heading.heading_3.heading_left.filters__title Этажность
+        each val, key in {onefloor: 'Одноэтажные', twofloor: 'Двухэтажные', attic: 'С мансардой'}
+            .filters__block
+                label.filters__label
+                    input(type="checkbox" name= key) 
+                    span.filters__text= val

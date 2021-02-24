@@ -1,0 +1,71 @@
+extends base.pug
+include breadcrumbs.pug
+include form.pug
+include project-card.pug
+block main
+    main.main
+        +breadcrumbs(['Главная', 'Проекты', 'Проект'])
+        .container
+            h1.heading.heading_1.heading_left Дом из клееного бруса по проекту "Проект"
+        .container
+            .project__gallery
+                img.project__img(src="img/project_1.jpg", alt="")
+            .project__summary
+                .project__summary-info
+                    h3.heading.heading_3.heading_left.project__summary-caption Характеристики
+                    table.project__table
+                        tr.project__table-row
+                            td.project__table-cell Площадь
+                            td.project__table-cell 100 м2
+                        tr.project__table-row
+                            td.project__table-cell Этажей
+                            td.project__table-cell 2
+                .project__summary-price
+                    .project__price
+                        span Стоимость: 
+                        span от 999999 р.
+                    .project__cta#project-form-button
+                        button.btn.btn_base.btn_accent.btn_ripple Заказать
+        .container
+            h3.heading.heading_left.heading_3 Комплектации
+            .project__options
+                table.project__options-table
+                    thead.project__options-header
+                        tr
+                            th.project__options-cell Что входит в пакет
+                            th.project__options-cell Домокомплект
+                            th.project__options-cell Домокомплект с монтажом
+                            th.project__options-cell Теплый контур
+                    tbody
+                        tr
+                            td.project__options-cell Название опции
+                            td.project__options-cell
+                                span.project__options-check
+                            td.project__options-cell
+                                span.project__options-check
+                            td.project__options-cell
+                                span.project__options-check
+                        tr
+                            td.project__options-cell Название опции
+                            td.project__options-cell
+                            td.project__options-cell
+                                span.project__options-check
+                            td.project__options-cell
+                                span.project__options-check
+                        tr
+                            td.project__options-cell Название опции
+                            td.project__options-cell
+                            td.project__options-cell
+                            td.project__options-cell
+                                span.project__options-check
+        .container
+            +form('Заказать дом по этому проекту')
+        .container
+            h2.heading.heading_2 Похожие проекты
+            .project__related
+                - var i = 0;
+                            while i < 4
+                                +project-card
+                                - i++
+
+            

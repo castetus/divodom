@@ -1,0 +1,15 @@
+.breadcrumbs {
+  padding-top: 44px; }
+  .breadcrumbs__item {
+    position: relative;
+    list-style-type: none;
+    display: inline-block; }
+    .breadcrumbs__item:not(:last-child):after {
+      content: '>';
+      position: absolute;
+      right: 8px;
+      color: #8C8C8C; }
+  .breadcrumbs__link {
+    color: #8C8C8C;
+    margin-right: 30px;
+    font-size: 14px; }

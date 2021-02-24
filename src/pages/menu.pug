@@ -1,0 +1,31 @@
+include social.pug
+.menu.menu_hidden#menu
+                .menu__header
+                    a(href="index.html")
+                        img(src="img/logo_1_small.jpg")
+                    a.header__phone.link(href="tel:+78129058163")
+                            span 905-81-63
+                    button.menu__close#close-menu
+                ul.menu__list
+                    li.menu__item
+                        a.menu__link.link.link_hovered(href="projects.html") Проекты
+                    li.menu__item.menu__item_has-children
+                        a.menu__link.link.link_hovered Услуги
+                        ul.menu__submenu
+                            each val in ['Проектирование', 'Геология', 'Отделочные работы', 'Ландшафтный дизайн', 'Баня']
+                                li.menu__submenu-item
+                                    a.menu__submenu-link.link_hovered(href="service.html")= val
+                    li.menu__item
+                        a.menu__link.link.link_hovered(href="production.html") Производство
+                    li.menu__item
+                        a.menu__link.link.link_hovered(href="gallery.html") Галерея
+                    li.menu__item
+                        a.menu__link.link.link_hovered(href="actions.html") Акции
+                    li.menu__item
+                        a.menu__link.link.link_hovered(href="about.html") О нас
+                    li.menu__item
+                        a.menu__link.link.link_hovered(href="reviews.html") Отзывы
+                    li.menu__item
+                        a.menu__link.link.link_hovered(href="blog.html") Блог
+                .menu__contacts
+                    +social('text')

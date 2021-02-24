@@ -1,0 +1,52 @@
+@import "../scss/variables";
+.container{
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 15px;
+    &_adaptive{
+        flex-direction: column;
+        @media screen and (min-width: $tablets){
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        @media screen and (min-width: $desktop){
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+    }
+    &_padding{
+        padding: 0 15px;
+    }
+    &_reverse{
+        flex-direction: column-reverse;
+        @media screen and (min-width: $tablets){
+            flex-direction: row;
+        }
+    }
+    &_no-wrap{
+        @media screen and (min-width: $tablets){
+            flex-wrap: nowrap;
+        }
+    }
+    &_full-width{
+        width: 100%;
+    }
+    @media screen and (min-width: 576px){
+        // width: 540px;
+    }
+    @media screen and (min-width: $tablets){
+        // width: 720px;
+        padding: 0 30px;
+    }
+    @media screen and (min-width: 992px){
+        // width: 960px;
+        padding: 0 30px;
+    }
+    @media screen and (min-width: 1200px){
+        width: 1200px;
+        padding: 0 30px;
+        flex-direction: row;
+    }
+}

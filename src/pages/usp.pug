@@ -1,0 +1,10 @@
+mixin usp
+    .usp
+        ul.usp__list
+                - var i = 1;
+                    while i < 7
+                        li.usp__item
+                            span.usp__number= i++
+                            h4.usp__title Преимущество 
+                            p.usp__text Здесь будет написано про какое-то преимущество, это будет редактироваться из админки
+                            //- - i++

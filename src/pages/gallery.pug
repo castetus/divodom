@@ -1,0 +1,14 @@
+extends base.pug
+include breadcrumbs.pug
+include grid.pug
+include form.pug
+block main
+    main.main
+        +breadcrumbs(['Главная', 'Галерея'])
+        .container
+            h1.heading.heading_1.heading_left Построенные нами дома
+        .container
+            +grid(['Построенный нами дом', 'Отличный дом в Токсово', 'Баня в Кингисеппе', 'Еще один дом', 'Ну и еще домик', 'Ну и для полного счастья еще один'], 'gallery-item.html', 'img/main-banner.jpg')
+            a.btn.btn_base.btn_outlined.btn_center Загрузить еще
+        .container
+            +form('Хотите такой же дом?')

@@ -1,0 +1,65 @@
+.project {
+  display: flex;
+  flex-direction: column; }
+  @media screen and (min-width: 767px) {
+    .project__gallery {
+      width: 67%; } }
+  .project__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+  .project__summary {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px; }
+    @media screen and (min-width: 767px) {
+      .project__summary {
+        width: 25%;
+        margin-left: 20px; } }
+  .project__summary-caption {
+    margin: 0; }
+  .project__table {
+    width: 100%;
+    margin-bottom: 30px;
+    border-collapse: collapse; }
+  .project__table-row {
+    border-bottom: 1px solid #999;
+    padding: 10px 0; }
+    .project__table-row:last-child {
+      border-bottom: none; }
+  .project__table-cell {
+    padding: 10px 0; }
+  .project__price {
+    display: flex;
+    white-space: nowrap;
+    justify-content: space-between; }
+  .project__cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; }
+    @media screen and (min-width: 1024px) {
+      .project__cta {
+        margin: 0; } }
+  .project__options {
+    width: 100%;
+    overflow-x: scroll; }
+  .project__options-table {
+    min-width: 100%; }
+  .project__options-check {
+    margin: 0 auto;
+    display: block;
+    width: 20px;
+    height: 20px; }
+    .project__options-check:before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: url("img/icons/check.svg") center no-repeat;
+      background-size: contain; }
+  @media screen and (min-width: 767px) {
+    .project {
+      flex-direction: row;
+      flex-wrap: nowrap; } }

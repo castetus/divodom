@@ -1,0 +1,25 @@
+.related-posts__item {
+  margin-bottom: 20px; }
+
+.related-posts__link {
+  display: flex; }
+
+.related-posts__img-block {
+  width: 50%; }
+
+.related-posts__img {
+  max-width: 100px;
+  width: 100%; }
+
+.related-posts__content {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start; }
+
+.related-posts__title {
+  margin: 0; }
+
+.related-posts__date {
+  font-style: italic; }

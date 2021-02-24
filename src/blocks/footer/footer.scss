@@ -1,0 +1,106 @@
+@import "../../scss/variables";
+.footer{
+    background-color: $base-color;
+    color: $white-color;
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    margin-top: 30px;
+    &__section{
+        padding: 0 15px;
+        flex-basis: 25%;
+        &:first-child{
+            text-align: center;
+        }
+        @media screen and (min-width: $tablets){
+            flex-basis: 45%;
+            text-align: left;
+        }
+    }
+    &__section-title{
+        font-size: 21px;
+        margin-bottom: 20px;
+        text-transform: capitalize;
+        border-bottom: $base-border;
+        @media screen and (max-width: $tablets){
+            cursor: pointer;
+            &:after{
+                content: '\203a';
+                transform: rotate(90deg);
+                display: block;
+                width: 10px;
+                height: 10px;
+                float: right;
+                font-size: 28px;
+                position: relative;
+                top: 5px;
+                right: 0;
+            }
+            &_active{
+                &:after{
+                    content: '\203a';
+                    transform: rotate(270deg);
+                    right: 25px;
+                }
+            }
+        }
+        
+    }
+    &__section-content{
+        visibility: hidden;
+        max-height: 1px;
+        transition: all 0.4s linear;
+        overflow: hidden;
+        &_visible{
+            visibility: visible;
+            max-height: 300px;
+            transition: all 0.4s linear;
+        }
+        @media screen and (min-width: $tablets){
+            visibility: visible;
+            max-height: 300px;
+        }
+    }
+    &__bottom-line{
+        display: flex;
+        margin-top: 15px;
+        // background-color: $base-dark-color;
+        color: #fff;
+    }
+    &__bottom-wrapper{
+        
+        width: 100%;
+        text-align: center;
+    }
+    &__logo{
+        width: 139px;
+        height: auto;
+    }
+    &__menu-item{
+        list-style-type: none;
+        position: relative;
+        transition: all .3s;
+        margin-top: 15px;
+        // &:before{
+        //     left: -15px;
+        //     transition: all .3s;
+        //     content: '';
+        //     width: 10px;
+        //     height: 10px;
+        //     bottom: 4px;
+        //     // background: url('img/right-arrow-white.svg') center no-repeat;
+        //     // background-size: contain;
+        //     position: absolute;
+        //     opacity: 0;
+        //     cursor: pointer;
+        // }
+        // &:hover, &:active{
+        //     padding-left: 15px;
+        //     &:before{
+        //         opacity: 1;
+        //         left: 0px;
+        //         // transition: all .3s;
+        //     }
+        // }
+    }
+}

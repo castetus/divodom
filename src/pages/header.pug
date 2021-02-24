@@ -1,0 +1,32 @@
+include social.pug
+header.header
+    .container.container_no-wrap(style="align-items: center")
+            .header__logo
+                a.header__link(href="index.html")
+                    img.header__logo-img(src="img/logo_1_cropped.jpg")
+            .header__wrapper
+                .header__top-wrapper
+                    a.header__link(href="index.html")
+                        span.header__site-name диводом 
+                    .header__contacts
+                        a.header__phone.link(href="tel:+78129058163")
+                            .header__phone-icon
+                            span +7 (812) 905-81-63
+                        +social('no-text')
+                    .header__actions
+                        button.header__action.header__search-button#search-button
+                        .header__search#search
+                            input.header__search-field#search-field(type="text" placeholder="Поиск")
+                        button.header__action.header__account-button.btn.btn_outlined-white#account-button
+                            span.header__account-button-text Личный кабинет
+                        .menu__dropdown#dropdown
+                include menu.pug
+    include form-login.pug
+    include form-register.pug
+
+            
+            
+
+
+
+

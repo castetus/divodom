@@ -1,0 +1,5 @@
+.main-section {
+  flex: 100%; }
+  @media screen and (min-width: 1024px) {
+    .main-section {
+      flex: 75%; } }

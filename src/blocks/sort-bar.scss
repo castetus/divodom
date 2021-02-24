@@ -1,0 +1,16 @@
+.sort-bar{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    &__label{
+
+    }
+    &__select{
+        margin-left: 20px;
+        border: none;
+        background-color: #fff;
+        cursor: pointer;
+        color: rgb(133, 133, 133);
+    }
+}

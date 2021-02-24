@@ -1,0 +1,9 @@
+@import "../scss/variables";
+
+.article{
+    padding: 40px 0 0;
+    width: 100%;
+    @media screen and (min-width: $tablets){
+        padding: 60px 0 0;
+    }
+}

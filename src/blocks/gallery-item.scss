@@ -1,0 +1,25 @@
+@import "../scss/variables";
+.gallery-item{
+    display: flex;
+    &__img-block{
+        width: 100%;
+        @media screen and (min-width: $tablets){
+            width: auto;
+            flex: 1 0 75%;
+        }
+    }
+    &__img{
+        width: 100%;
+    }
+    &__short-description{
+        padding: 20px;
+        @media screen and (min-width: $tablets){
+            padding-left: 20px;
+            width: auto;
+            flex: 1 0 25%;
+        }
+    }
+    &__description{
+
+    }
+}

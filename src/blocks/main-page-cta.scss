@@ -1,0 +1,68 @@
+@import "../scss/variables";
+.main-page-cta{
+    padding: 20px;
+    display: flex;
+    width: 100%;
+    &_left{
+        justify-content: flex-start;
+    }
+    &_right{
+        justify-content: flex-end;
+    }
+    &__block{
+        // flex-basis: 50%;
+        width: 100%;
+        border: 2px solid $second-accent-color;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media screen and(min-width: $mobile){
+            width: auto;
+        }
+    }
+    &__title{
+        color: $base-color;
+        font-size: 20px;
+        font-weight: 600;
+        margin: 20px 10px;
+    }
+    &__link{
+        flex: 1 0 50%;
+        color: $accent-dark-color;
+        font-size: 20px;
+        text-decoration: underline;
+        position: relative;
+        margin: 0 0 20px 50px;
+        &:before{
+            content: '';
+            background-size: contain;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: -40px;
+        }
+        &_insta{
+            &:before{
+                background: url('img/icons/instagram-color.svg') center no-repeat;
+            }
+        }
+        &_vk{
+            &:before{
+                background: url('img/icons/vk-color.svg') center no-repeat;
+            }
+        }
+        &_phone{
+            &:before{
+                background: url('img/icons/phone-color.svg') center no-repeat;
+            }
+        }
+        @media screen and(min-width: $mobile){
+            font-size: 30px;
+            &:before{
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}

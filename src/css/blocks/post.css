@@ -1,0 +1,11 @@
+.post__img {
+  max-width: 100%; }
+
+.post__attrs {
+  display: flex;
+  font-style: italic;
+  justify-content: space-between;
+  padding: 20px 0; }
+
+.post__content {
+  text-align: justify; }

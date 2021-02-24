@@ -1,0 +1,12 @@
+.sale {
+  margin-bottom: 20px; }
+  .sale__content {
+    display: flex; }
+  .sale__img {
+    max-width: 25%; }
+    .sale__img_right {
+      margin-left: 20px; }
+    .sale__img_left {
+      margin-right: 20px; }
+  .sale__text {
+    text-align: justify; }

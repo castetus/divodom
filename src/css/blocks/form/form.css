@@ -1,0 +1,73 @@
+.form {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly; }
+  .form__wrapper {
+    width: 100%;
+    padding: 30px;
+    background-color: #261211;
+    color: #fff;
+    margin: 30px auto;
+    text-align: center; }
+  .form__elem {
+    margin-top: 20px; }
+  .form__field {
+    width: 100%;
+    line-height: 1.9rem;
+    background-color: #fff;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    flex-basis: 33%;
+    padding-left: 10px; }
+    @media screen and (min-width: 767px) {
+      .form__field {
+        border-right: 1px solid #e2e2e2;
+        border-radius: 0; } }
+  .form__checkbox-wrapper {
+    display: flex;
+    order: 3; }
+    @media screen and (min-width: 767px) {
+      .form__checkbox-wrapper {
+        order: 4; } }
+  .form__checkbox {
+    margin-right: 10px; }
+  .form__button {
+    order: 4; }
+    @media screen and (min-width: 767px) {
+      .form__button {
+        order: 3;
+        border-radius: 0; } }
+  .form_modal {
+    display: none;
+    left: calc(50% - 150px);
+    z-index: 350;
+    position: fixed;
+    width: 300px; }
+    @media screen and (min-width: 767px) {
+      .form_modal {
+        width: 500px;
+        left: calc(50% - 250px); } }
+    @media screen and (min-width: 1024px) {
+      .form_modal {
+        width: 800px;
+        left: calc(50% - 400px); } }
+  .form_visible {
+    display: block; }
+  @media screen and (min-width: 767px) {
+    .form {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-end; } }
+  @media screen and (min-width: 1024px) {
+    .form:before {
+      content: '';
+      background: url("img/logo_1_cropped.jpg") left top no-repeat;
+      background-size: contain;
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      left: 0;
+      top: -50px; } }

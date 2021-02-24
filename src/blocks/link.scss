@@ -1,0 +1,13 @@
+@import "../scss/variables";
+.link{
+    text-decoration: none;
+    &_underlined{
+        text-decoration: underline;
+    }
+    &_hovered{
+        &:hover{
+            color: $accent-color;
+            text-decoration: underline;
+        }
+    }
+}

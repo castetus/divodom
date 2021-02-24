@@ -1,0 +1,18 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset = 'utf-8')
+        meta(name='viewport', content="initial-scale=1.0, width=device-width")
+        title
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.1/swiper-bundle.min.css")
+        link(href="style.css", rel='stylesheet')
+        //- script(src="js/swiper.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.1/swiper-bundle.js")
+    body
+        include header.pug
+        block main
+        include footer.pug
+        .scroller#scroller
+            button.scroller__btn
+        .mask#mask
+        script(src="js/main.js")

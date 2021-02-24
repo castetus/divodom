@@ -1,0 +1,24 @@
+.usp__list {
+  display: flex;
+  flex-wrap: wrap; }
+
+.usp__item {
+  position: relative;
+  padding: 0 10px;
+  list-style-type: none;
+  flex-basis: 100%; }
+  @media screen and (min-width: 767px) {
+    .usp__item {
+      flex-basis: 50%; } }
+  @media screen and (min-width: 1024px) {
+    .usp__item {
+      flex-basis: 33.3%; } }
+
+.usp__number {
+  position: absolute;
+  top: 35%;
+  left: 0;
+  font-size: 3rem;
+  color: #00ffff;
+  font-weight: 600;
+  z-index: -1; }

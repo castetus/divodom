@@ -1,0 +1,12 @@
+@import "../scss/variables";
+.projects-loop{
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: repeat(1, 1fr);
+    @media screen and (min-width: $mobile){
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (min-width: $tablets){
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

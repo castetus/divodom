@@ -1,0 +1,28 @@
+@import "../scss/variables";
+.usp{
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item{
+        position: relative;
+        padding: 0 10px;
+        list-style-type: none;
+        flex-basis: 100%;
+        @media screen and (min-width: $tablets){
+            flex-basis: 50%;
+        }
+        @media screen and (min-width: $desktop){
+            flex-basis: 33.3%;
+        }
+    }
+    &__number{
+        position: absolute;
+        top: 35%;
+        left: 0;
+        font-size: 3rem;
+        color: $accent-color;
+        font-weight: 600;
+        z-index: -1;
+    }
+}

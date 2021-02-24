@@ -1,0 +1,63 @@
+extends base.pug
+include project-card.pug
+include usp.pug
+include form.pug
+include grid.pug
+include social.pug
+block main
+    main.main
+        .container_full-width
+            .main-banner
+                img.main-banner__img(src="img/main-banner.jpg", alt="")
+                .main-banner__content
+                    a.main-banner__link(href="actions.html")
+                        h2.main-banner__title Акция!!!
+                        p.main-banner__text Пенсионерам дом бесплатно
+        section.section
+            .container
+                include test.pug
+                //- h1.heading.heading_1 Загородное строительство в СПб под ключ
+                //- p Сюда предлагаю пустить какой-то текст небольшой - вкратце о компании так сказать
+                //- //- include stepper.pug
+        section.section
+            .container
+                h2.heading.heading_2 Преимущества
+                +usp
+        section.section
+            .container
+                h2.heading.heading_2 Выбери свой дом
+                .swiper-container
+                    .swiper-wrapper
+                        - var i = 0;
+                                while i < 12
+                                    .swiper-slide
+                                        +project-card
+                                        - i++
+                    .swiper-navigation.swiper-navigation_left
+                    .swiper-navigation.swiper-navigation_right
+                    .swiper-pagination
+                a.btn.btn_center.btn_outlined.btn_outlined-hover(href="projects.html") Полный список проектов
+        section.section
+            .container
+                h2.heading.heading_2 Полезное о загородном строительстве
+                +grid(['Статья о загородном строительстве 1', 'Статья о загородном строительстве 2', 'Статья о загородном строительстве 3'], 'post.html', 'img/post.jpg')
+                a.btn.btn_center.btn_outlined.btn_outlined-hover(href="blog.html") Все статьи
+        section.section
+            .container
+                h2.heading.heading_2 Остались вопросы?
+                .main-page-cta.main-page-cta_left
+                    .main-page-cta__block
+                        h3.heading.heading_3.main-page-cta__title Следи за новостями в соцсетях:
+                        a.link.main-page-cta__link.main-page-cta__link_insta(href="https://www.instagram.com/divodom.ok/")
+                            span Мы в Инстаграм
+                        a.link.main-page-cta__link.main-page-cta__link_vk(href="https://vk.com/divodom_com")
+                            span Мы Вконтакте
+                .main-page-cta.main-page-cta_right
+                    .main-page-cta__block
+                        h3.heading.heading_3.main-page-cta__title Звони:
+                        a.link.main-page-cta__link.main-page-cta__link_phone(href="tel:+78129058163")
+                            span +7 (812) 905-81-63
+                h2.heading.heading_2.main-page-cta__title Приезжай:
+                +form('Заявка на посещение строительного объекта')
+                h2.heading.heading_2 Наши партнеры:
+                .partners-list

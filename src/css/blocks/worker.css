@@ -1,0 +1,15 @@
+.worker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px; }
+  .worker__avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-right: 20px; }
+  .worker__description {
+    text-align: justify; }
+  @media screen and (min-width: 767px) {
+    .worker {
+      flex-direction: row; } }

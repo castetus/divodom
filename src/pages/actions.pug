@@ -1,0 +1,22 @@
+extends base.pug
+include breadcrumbs.pug
+//- include usp.pug
+include form.pug
+block main
+    main.main
+        +breadcrumbs(['Главная', 'Акции'])
+        .container
+            h1.heading.heading_1.heading_left Акции
+        .container
+            .sale
+                h2.heading.heading_2.sale__header Строим даром!
+                .sale__content
+                    img.sale__img.sale__img_left(src="img/sale.jpg", alt="")
+                    p.sale__text Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
+            .sale
+                h2.heading.heading_2.sale__header Строим даром!
+                .sale__content
+                    p.sale__text Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
+                    img.sale__img.sale__img_right(src="img/sale.jpg", alt="")
+        .container
+            +form('')

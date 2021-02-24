@@ -1,0 +1,31 @@
+extends base.pug
+include breadcrumbs.pug
+block main
+    main.main
+        +breadcrumbs(['Главная', 'Блог', 'Статья о загородном строительстве'])
+        .container
+            h1.heading.heading_1.heading_left Статья о загородном строительстве
+        .container
+            .sidebar
+                .sidebar_sticky
+                    .related-posts
+                        .related-posts__item
+                            a.related-posts__link(href="post.html")
+                                .related-posts__img-block
+                                    img.related-posts__img(src="img/post.jpg", alt="")
+                                .related-posts__content
+                                    h4.related-posts__title Какой-то пост
+                                    span.related-posts__date 12.12.2020
+                        .related-posts__item
+                            a.related-posts__link(href="post.html")
+                                .related-posts__img-block
+                                    img.related-posts__img(src="img/post.jpg", alt="")
+                                .related-posts__content
+                                    h4.related-posts__title Какой-то пост
+                                    span.related-posts__date 12.12.2020
+            .main-section
+                img.post__img(src="img/post.jpg")
+                .post__attrs
+                    span.post__date 01.01.2021
+                    span.post__author Павел Еселев
+                p.post__content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit, sapien eu iaculis finibus, metus tortor dapibus felis, at hendrerit leo lacus id ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse potenti. Sed vestibulum, augue pulvinar accumsan consequat, quam ipsum dictum mi, blandit tempus sem quam congue arcu. Donec vitae erat vitae justo blandit vulputate. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pharetra ultricies massa non tempus. Curabitur fermentum ullamcorper dolor, vitae dapibus felis dictum quis. Quisque vel ornare erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer volutpat nec ex eget vulputate. Phasellus porta, nunc vel pretium placerat, lacus ligula maximus elit, tincidunt rutrum urna mi a velit. Phasellus a quam vitae libero convallis porttitor. Etiam tristique leo id sem tincidunt viverra. Curabitur scelerisque gravida sem, vitae finibus ex convallis dictum. Curabitur eleifend, ante pharetra pulvinar aliquet, erat lorem efficitur sem, non euismod massa ipsum vitae mi. Quisque mauris mauris, facilisis maximus odio vitae, semper dignissim nisl. Nulla consectetur felis massa, cursus vestibulum leo imperdiet eget. Pellentesque pretium elit nibh, a facilisis urna maximus vel. Praesent convallis dignissim erat, a scelerisque odio. Suspendisse congue orci justo, vel imperdiet ex imperdiet vitae. Vestibulum ut aliquam velit. Praesent pulvinar posuere tincidunt. Donec tristique massa eu leo congue dignissim. Proin a porta lorem. Vestibulum varius enim ut ante interdum iaculis. Praesent gravida nibh vitae odio facilisis, ullamcorper tincidunt magna tristique. Aliquam sagittis porttitor est sit amet tincidunt. Nam vulputate lacus augue, eget faucibus quam suscipit ut. Praesent sapien elit, dignissim id pretium quis, bibendum congue mauris. Aenean et porttitor tellus, venenatis pulvinar ipsum. Sed eu orci eu est bibendum sodales. Morbi vitae commodo tortor. Donec auctor mi ac sollicitudin tincidunt. Suspendisse viverra lectus a euismod molestie. Nam ac finibus diam. Donec aliquam orci justo, eget pellentesque velit efficitur in. In condimentum ut leo sit amet pellentesque. Integer vel blandit purus. Morbi felis lacus, malesuada sit amet est in, eleifend facilisis est. Praesent blandit, mi ut lacinia aliquet, est urna lobortis dui, in convallis leo metus sed augue. In eu luctus erat. Vivamus lobortis auctor mi, interdum rhoncus neque consectetur et. Nunc rutrum sit amet elit ac sagittis. Nullam nisi lectus, ultrices a arcu id, posuere maximus lorem. Duis at ante bibendum, finibus lorem id, scelerisque odio. Sed a massa urna. Etiam tempor sollicitudin posuere. Vestibulum aliquet diam sed auctor mollis. Ut porttitor luctus sapien eget ultrices. Duis fringilla eget dolor ut interdum.

@@ -1,0 +1,27 @@
+.sidebar {
+  background-color: #fff;
+  display: none;
+  padding: 15px; }
+  .sidebar__mobile-header {
+    width: 100%;
+    min-height: 30px; }
+    @media screen and (min-width: 767px) {
+      .sidebar__mobile-header {
+        display: none; } }
+  .sidebar_sticky {
+    position: sticky;
+    top: 30px; }
+  .sidebar_visible {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 100vh;
+    width: 100vw; }
+  @media screen and (min-width: 767px) {
+    .sidebar {
+      padding: 0 15px;
+      display: flex;
+      flex: 1 0 25%;
+      flex-direction: column; } }

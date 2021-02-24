@@ -1,0 +1,15 @@
+@import "../scss/variables";
+
+.block{
+    flex: 1 0 50%;
+    padding: 0 15px;
+    max-width: 100%;
+    &_center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &_column{
+        flex-direction: column;
+    }
+}

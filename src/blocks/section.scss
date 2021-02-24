@@ -1,0 +1,7 @@
+@import "../scss/variables";
+.section{
+    margin: 20px 0;
+    @media screen and (min-width: $desktop){
+        margin: 40px 0;
+    }
+}

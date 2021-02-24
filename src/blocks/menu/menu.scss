@@ -1,0 +1,171 @@
+@import "../../scss/variables";
+
+.menu{
+  z-index: 300;
+  position: absolute;
+  background-color: $base-color;
+  height: 100vh;
+  width: 320px;
+  right: 0;
+  right: -335px;
+  top: 0;
+  transition: all 0.4s linear;
+  display: none;
+  &__header{
+    padding: 20px;
+    height: $header-height;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (min-width: $desktop){
+      display: none;
+    }
+  }
+  &__close{
+    width: 20px;
+    height: 20px;
+    background: url('img/icons/cancel.svg') center no-repeat;
+    background-size: contain;
+    cursor: pointer;
+  }
+  &__list{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: $desktop){
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 10px;
+    }
+  }
+  &__item{
+    list-style-type: none;
+    padding: 10px;
+    &:not(:first-child){
+      border-top: $base-border;
+    }
+    &_has-children{
+      cursor: pointer;
+      position: relative;
+      &::after{
+        content: "";
+        background: url('img/icons/inverted-triangle.svg') center no-repeat;
+        background-size: contain;
+        position: absolute;
+        right: 0;
+        width: 16px;
+        height: 16px;
+        top: 12px;
+        @media screen and (min-width: $desktop){
+          top: 20%;
+          right: -5px;
+          width: 10px;
+          height: 10px;
+        }
+      }
+    }
+    @media screen and (min-width: $desktop){
+      display: inline-block;
+      padding: 0;
+      border-top: transparent!important;
+      margin-right: 16px;
+      &:hover .menu__submenu{
+        visibility: visible;
+        max-height: 200px;
+      }
+    }
+  }
+  &__link{
+    text-transform: uppercase;
+    color: $white-color;
+    @media screen and (min-width: $desktop){
+      margin: 10px;
+    }
+  }
+  &__submenu{
+    overflow: hidden;
+    visibility: hidden;
+    max-height: 1px;
+    transition: all 0.4s linear;
+    width: max-content;
+    &_visible{
+      visibility: visible;
+      max-height: 200px;
+      transition: all 0.4s linear;
+    }
+    @media screen and (min-width: $desktop){
+      background-color: $grey-color;
+      position: absolute;
+      top: 33px;
+    }
+  }
+  &__submenu-item{
+    padding: 10px 0 0 10px;
+    list-style-type: none;
+    @media screen and (min-width: $desktop){
+      padding: 10px;
+    }
+  }
+  &__submenu-link{
+    color: $white-color;
+    @media screen and (min-width: $desktop){
+      color: $base-color;
+    }
+  }
+  &__contacts{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @media screen and (min-width: $mobile){
+      display: none;
+    }
+  }
+  &__dropdown{
+    margin: 10px 0 0 10px;
+    cursor: pointer;
+    display: block;
+    background: url('img/icons/menu.svg') center no-repeat;
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    @media screen and (min-width: $desktop){
+      display: none;
+    }
+  }
+  &_visible{
+    right: 0;
+    animation: menuAnimation 0.4s linear forwards;
+  }
+  &_hidden{
+    animation: menuAnimationReverse 0.4s linear forwards;
+  }
+  @media screen and (min-width: $tablets){
+    width: 335px;
+  }
+  @media screen and (min-width: $desktop){
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    position: static;
+    height: auto;
+    visibility: visible;
+  }
+}
+
+@keyframes menuAnimation{
+  0%{
+    right: -335px;
+  }
+  100%{
+    right: 0px;
+  }
+}
+@keyframes menuAnimationReverse{
+  0%{
+    right: 0px;
+  }
+  100%{
+    right: -335px;
+  }
+}
